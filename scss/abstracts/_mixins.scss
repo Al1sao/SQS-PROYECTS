@@ -1,0 +1,63 @@
+// ==========================================================
+// Mixins reutilizables
+// ==========================================================
+@use 'sass:map';
+@use 'variables' as *;
+
+// Media query "desde abajo": @include down(md) { ... }
+@mixin down($bp) {
+  @media (max-width: (map.get($breakpoints, $bp) - 0.02px)) {
+    @content;
+  }
+}
+
+@mixin up($bp) {
+  @media (min-width: map.get($breakpoints, $bp)) {
+    @content;
+  }
+}
+
+@mixin flex-center($dir: row) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: center;
+  justify-content: center;
+}
+
+// Tarjeta blanca grande con bordes muy redondeados (estilo del diseño)
+@mixin soft-card($radius: $radius-xl) {
+  background: $gradient-card;
+  border-radius: $radius;
+  box-shadow: $shadow-card;
+}
+
+// Sombra "desplazada" gris que aparece detrás del hero e inputs
+@mixin offset-shadow($x: 10px, $y: 10px, $color: $gray-300, $radius: inherit) {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translate($x, $y);
+    background: $color;
+    border-radius: $radius;
+    z-index: -1;
+  }
+}
+
+@mixin focus-ring {
+  outline: 3px solid rgba($blue-500, 0.55);
+  outline-offset: 3px;
+}
+
+@mixin visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

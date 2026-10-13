@@ -1,0 +1,16 @@
+// Página: Contacto y soporte
+@use '../abstracts' as *;
+
+.page-contacto {
+  @include up(md) {
+    .hero__title {
+      margin-left: 18px;
+    }
+
+    .hero__subtitle {
+      margin-top: 36px;
+      max-width: 800px;
+      padding-left: 16px;
+    }
+  }
+}

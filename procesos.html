@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal educativo sobre Gestión de Calidad de Software, SQA y metodologías ágiles.">
+  <meta name="theme-color" content="#0f172a">
+  <title>Procesos de desarrollo de software | S.Q.S - Scrum Quality Service</title>
+  <link rel="icon" type="image/png" href="assets/img/logo-nav.png">
+  <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="dist/css/main.css?v=mv649g3j">
+  <script src="dist/js/bundle.js?v=mv649g3j" defer></script>
+</head>
+
+<body class="page-procesos" data-page="procesos">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="index.html" aria-label="S.Q.S - Ir al inicio">
+      <img draggable="false" class="brand__logo" src="assets/img/logo-nav.webp" alt="Logo de S.Q.S Scrum Quality Service: tres círculos entrelazados" width="70" height="70">
+      <span>S.Q.S</span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" data-page="inicio" href="index.html">Inicio</a>
+        </li>
+
+        <li class="main-nav__item has-dropdown">
+          <a class="main-nav__link" data-page="gestion" href="fundamentos.html">Gestión de<br> calidad</a>
+          <button class="submenu-toggle" type="button" aria-expanded="false" aria-label="Ver submenú de Gestión de calidad"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+          <ul class="dropdown">
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="procesos.html#sdlc"><svg class="dropdown__icon" viewBox="0 0 34 26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v8c0 6 4 9 10 9h18"/><path d="M26 14l5 5-5 5"/></svg><span>Ciclo de Vida del Desarrollo de Software (SDLC)</span></a>
+            </li>
+            <li class="dropdown__item has-dropdown">
+              <a class="dropdown__link" href="fundamentos.html"><svg class="dropdown__icon" viewBox="0 0 34 26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v8c0 6 4 9 10 9h18"/><path d="M26 14l5 5-5 5"/></svg><span>Fundamentos</span></a>
+              <button class="submenu-toggle" type="button" aria-expanded="false" aria-label="Ver submenú de Fundamentos"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+              <ul class="dropdown dropdown--sub">
+                <li><a class="dropdown__link" href="fundamentos.html#conceptos"><svg class="dropdown__icon" viewBox="0 0 34 26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v8c0 6 4 9 10 9h18"/><path d="M26 14l5 5-5 5"/></svg><span>Conceptos clave de calidad</span></a></li>
+                <li><a class="dropdown__link" href="fundamentos.html#metricas"><svg class="dropdown__icon" viewBox="0 0 34 26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v8c0 6 4 9 10 9h18"/><path d="M26 14l5 5-5 5"/></svg><span>Métricas</span></a></li>
+                <li><a class="dropdown__link" href="fundamentos.html#iso"><svg class="dropdown__icon" viewBox="0 0 34 26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v8c0 6 4 9 10 9h18"/><path d="M26 14l5 5-5 5"/></svg><span>Estándares ISO</span></a></li>
+              </ul>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="fundamentos.html#tecnicas"><svg class="dropdown__icon" viewBox="0 0 34 26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v8c0 6 4 9 10 9h18"/><path d="M26 14l5 5-5 5"/></svg><span>Técnicas de aseguramiento de la calidad</span></a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="fundamentos.html#herramientas"><svg class="dropdown__icon" viewBox="0 0 34 26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v8c0 6 4 9 10 9h18"/><path d="M26 14l5 5-5 5"/></svg><span>Herramientas de calidad</span></a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="main-nav__item">
+          <a class="main-nav__link" data-page="procesos" href="procesos.html">Procesos de<br> desarrollo</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" data-page="metodologias" href="metodologias.html">Metodologías<br> ágiles</a>
+        </li>
+        <li class="main-nav__item main-nav__item--last">
+          <a class="main-nav__link" data-page="recursos" href="recursos.html">Recursos</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main id="contenido">
+  <div class="container">
+    <section class="hero reveal" aria-labelledby="hero-title">
+  <div class="hero__text">
+    <h1 id="hero-title" class="hero__title">Procesos de desarrollo<br>de software</h1>
+    <p class="hero__subtitle">Ciclo de vida (SDLC), modelo en Cascada y modelo en V.</p>
+  </div>
+  <img draggable="false" class="hero__logo" src="assets/img/logo-hero.webp" alt="Logo Scrum Quality Service" width="180" height="194">
+</section>
+
+
+    <!-- SDLC -->
+    <section id="sdlc" class="section-card reveal" aria-labelledby="t-sdlc">
+      <header class="section-card__header">
+        <img draggable="false" class="section-card__icon" src="assets/img/ic-cycle.webp" alt="Ícono de ciclo continuo que representa el ciclo de vida del software" width="36" height="38">
+        <h2 id="t-sdlc" class="section-card__title">Ciclo de Vida del Desarrollo de Software (SDLC)</h2>
+      </header>
+      <ul class="arrow-list">
+        <li>Marco que define las etapas para construir software: planificación, análisis, diseño, implementación, pruebas y mantenimiento.</li>
+        <li>Cada modelo (Cascada, V, ágiles) organiza esas etapas de una forma distinta.</li>
+        <li>El aseguramiento de la calidad (SQA) acompaña a todas las fases, no solo a las pruebas.</li>
+      </ul>
+    </section>
+
+    <!-- Modelo en Cascada -->
+    <figure id="cascada" class="diagram diagram--waterfall reveal" aria-labelledby="t-cascada" data-lightbox data-lightbox-title="Modelo en Cascada (Waterfall)">
+      <div class="diagram__stage">
+        <svg class="diagram__svg" viewBox="0 0 1280 720" aria-hidden="true">
+          <g fill="none" stroke="#7b96d4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+            <path class="draw" d="M222 216 C 216 262, 232 286, 276 284 M262 268 L278 284 L262 298"/>
+            <path class="draw" d="M432 326 C 426 372, 442 392, 486 390 M472 374 L488 390 L472 404"/>
+            <path class="draw" d="M621 428 C 615 474, 631 494, 675 492 M661 476 L677 492 L661 506"/>
+            <path class="draw" d="M809 534 C 803 580, 819 600, 863 598 M849 582 L865 598 L849 612"/>
+          </g>
+        </svg>
+
+        <div class="diagram__head">
+          <img draggable="false" class="diagram__head-icon" src="assets/img/ic-gears-blue.webp" alt="Ícono de engranajes que representa las fases del modelo en cascada">
+          <h2 id="t-cascada" class="diagram__title">Modelo en Cascada (Waterfall)</h2>
+          <p class="diagram__desc">Estructura secuencial descendente para la gestión de proyectos.</p>
+        </div>
+
+        <div class="diagram__box" tabindex="0" style="--x:115; --y:128; --w:250; --step:0">
+          <img draggable="false" src="assets/img/ic-requisitos.webp" alt="Ícono de portapapeles con lista de requisitos">Requisitos
+          <span class="diagram__tip">Se recopilan y documentan todas las necesidades del cliente.</span>
+        </div>
+        <div class="diagram__box" tabindex="0" style="--x:304; --y:238; --w:253; --pl:40; --iw:42; --step:1">
+          <img draggable="false" src="assets/img/ic-diseno.webp" alt="Ícono de escuadra que representa la fase de diseño">Diseño
+          <span class="diagram__tip">Se define la arquitectura y el diseño detallado del sistema.</span>
+        </div>
+        <div class="diagram__box" tabindex="0" style="--x:513; --y:340; --w:240; --pl:20; --step:2">
+          <img draggable="false" src="assets/img/ic-laptop.webp" alt="Ícono de computadora portátil que representa la codificación">Codificación
+          <span class="diagram__tip">Los programadores implementan el diseño en código.</span>
+        </div>
+        <div class="diagram__box is-highlight" tabindex="0" style="--x:697; --y:443; --w:243; --pl:10; --step:3">
+          <img draggable="false" src="assets/img/ic-pruebas.webp" alt="Ícono de documento con lupa que representa las pruebas de calidad">Pruebas/SQA
+          <span class="diagram__tip">Se verifica que el software cumpla los requisitos de calidad.</span>
+        </div>
+        <div class="diagram__box" tabindex="0" style="--x:894; --y:550; --w:243; --pl:10; --iw:40; --step:4">
+          <img draggable="false" src="assets/img/ic-mant.webp" alt="Ícono de engranajes que representa el mantenimiento">Mantenimiento
+          <span class="diagram__tip">Corrección de errores y mejoras una vez en producción.</span>
+        </div>
+
+      </div>
+      <figcaption class="diagram__caption" style="--x:268; --w:735">
+        Figura 1.1: Flujo secuencial descendente del Modelo en Cascada (Waterfall).
+      </figcaption>
+    </figure>
+
+    <!-- Modelo en V -->
+    <figure id="modelo-v" class="diagram diagram--v reveal" aria-labelledby="t-v" data-lightbox data-lightbox-title="Modelo en V (Verification &amp; Validation)">
+      <div class="diagram__stage">
+        <svg class="diagram__svg" viewBox="0 0 1280 720" aria-hidden="true">
+          <defs>
+            <marker id="arrow-light" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+              <path d="M0 0 L10 5 L0 10 z" fill="#75a8f4"/>
+            </marker>
+            <marker id="arrow-dark" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse">
+              <path d="M0 0 L10 5 L0 10 z" fill="#13508b"/>
+            </marker>
+            <marker id="diamond" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4">
+              <path d="M5 0 L10 5 L5 10 L0 5 z" fill="#13508b"/>
+            </marker>
+          </defs>
+          <!-- Correspondencia verificación ↔ validación -->
+          <g stroke="#75a8f4" stroke-width="3" fill="none" marker-end="url(#arrow-light)">
+            <path class="draw" d="M372 205 H880"/>
+            <path class="draw" d="M436 341 H814"/>
+            <path class="draw" d="M578 471 H684"/>
+          </g>
+          <!-- Flujo descendente / ascendente -->
+          <g stroke="#13508b" stroke-width="3.5" fill="none" marker-start="url(#diamond)" marker-end="url(#arrow-dark)">
+            <path d="M252 250 L276 296"/>
+            <path d="M314 386 L350 428"/>
+            <path d="M1018 250 L990 298"/>
+            <path d="M933 380 L904 428"/>
+            <path d="M351 520 V568 H494" marker-mid="url(#diamond)"/>
+            <path d="M897 520 V570 H754" marker-mid="url(#diamond)"/>
+          </g>
+        </svg>
+
+        <div class="diagram__head">
+          <img draggable="false" class="diagram__head-icon diagram__head-icon--sm" src="assets/img/ic-cycle.webp" alt="Ícono de ciclo que representa la verificación y validación del modelo en V">
+          <h2 id="t-v" class="diagram__title">Modelo en V (Verification &amp; Validation)</h2>
+          <p class="diagram__desc">Relación directa entre las fases de desarrollo y sus niveles de prueba correspondientes.</p>
+        </div>
+
+        <div class="diagram__box" tabindex="0" style="--x:122; --y:164; --w:250">
+          <img draggable="false" src="assets/img/ic-requisitos.webp" alt="Ícono de portapapeles con lista de requisitos">Requisitos
+          <span class="diagram__tip">Se valida con las Pruebas de Aceptación.</span>
+        </div>
+        <div class="diagram__box" tabindex="0" style="--x:183; --y:300; --w:253; --iw:42">
+          <img draggable="false" src="assets/img/ic-diseno.webp" alt="Ícono de escuadra que representa el diseño de alto nivel">Diseño A.
+          <span class="diagram__tip">Diseño de alto nivel (arquitectura). Se valida con las Pruebas de Sistema.</span>
+        </div>
+        <div class="diagram__box" tabindex="0" style="--x:325; --y:432; --w:253; --iw:42">
+          <img draggable="false" src="assets/img/ic-diseno.webp" alt="Ícono de escuadra que representa el diseño detallado">Diseño B.
+          <span class="diagram__tip">Diseño detallado de módulos. Se valida con las Pruebas de Integración.</span>
+        </div>
+        <div class="diagram__box" tabindex="0" style="--x:498; --y:541; --w:253; --h:52; --pl:18">
+          <img draggable="false" src="assets/img/ic-laptop.webp" alt="Ícono de computadora portátil que representa la codificación">Codificación
+          <span class="diagram__tip">Vértice de la V: implementación y pruebas unitarias.</span>
+        </div>
+        <div class="diagram__box is-highlight" tabindex="0" style="--x:688; --y:432; --w:244; --pl:10">
+          <img draggable="false" src="assets/img/ic-pruebas.webp" alt="Ícono de documento con lupa que representa las pruebas de integración">P. Integración
+          <span class="diagram__tip">Comprueba que los módulos funcionen correctamente juntos.</span>
+        </div>
+        <div class="diagram__box" tabindex="0" style="--x:818; --y:300; --w:243; --pl:18; --iw:40">
+          <img draggable="false" src="assets/img/ic-mant.webp" alt="Ícono de engranajes que representa las pruebas de sistema">P. Sistema
+          <span class="diagram__tip">Evalúa el sistema completo frente al diseño de alto nivel.</span>
+        </div>
+        <div class="diagram__box" tabindex="0" style="--x:884; --y:164; --w:239; --pl:24">
+          <img draggable="false" src="assets/img/ic-aceptacion.webp" alt="Ícono de apretón de manos que representa la aceptación del cliente">P. Aceptación
+          <span class="diagram__tip">El cliente confirma que el producto cumple los requisitos.</span>
+        </div>
+
+      </div>
+      <figcaption class="diagram__caption" style="--x:247; --w:786">
+        Figura 1.2: Correspondencia entre fases de verificación (izquierda) y validación (derecha).
+      </figcaption>
+    </figure>
+
+    <!-- Modelo iterativo e incremental (US-07) -->
+    <figure id="iterativo" class="illustration reveal" data-lightbox data-lightbox-title="Modelo Iterativo e Incremental">
+      <header class="illustration__head">
+        <img draggable="false" class="illustration__icon" src="assets/img/ic-cycle.webp" alt="Ícono de ciclo que representa las iteraciones repetidas">
+        <div>
+          <h2 class="illustration__title">Modelo Iterativo e Incremental</h2>
+          <p class="illustration__desc">El producto se construye en varias vueltas; cada iteración entrega una versión más completa.</p>
+        </div>
+      </header>
+      <div class="illustration__media">
+        <img class="illustration__img" draggable="false" src="assets/img/diagrams/iterativo-incremental.svg"
+          alt="Diagrama de tres iteraciones. Cada una repite las fases planificar, diseñar, construir y probar, y genera un incremento: la versión 1.0 tiene un módulo, la 2.0 dos módulos y la 3.0 tres módulos. Entre iteraciones hay feedback del cliente."
+          width="1200" height="510" loading="lazy" decoding="async">
+      </div>
+      <figcaption class="illustration__caption">Figura 1.3: Cada iteración repite el ciclo completo y suma un incremento funcional al producto.</figcaption>
+    </figure>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <p>&copy; 2026 SQA Portal - Educación en Calidad de Software</p>
+    <span class="site-footer__sep" aria-hidden="true">I</span>
+    <a class="site-footer__pill" href="nosotros.html">Sobre Nosotros</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+// ==========================================================
+// Lightbox: vista de diagramas en pantalla completa (US-07 / US-09)
+// Sin botón de lupa y sin arrastre: el diagrama se ajusta a la ventana.
+// ==========================================================
+@use '../abstracts' as *;
+
+[data-lightbox] {
+  cursor: zoom-in;
+  transition: box-shadow $t-fast;
+
+  &:hover,
+  &:focus-visible {
+    box-shadow: 0 0 0 3px rgba($blue-500, 0.45), 0 18px 40px rgba(15, 23, 42, 0.18);
+  }
+}
+
+html.is-locked {
+  overflow: hidden;
+}
+
+.lightbox {
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: $white;
+  overflow: hidden;
+
+  &::backdrop {
+    background: rgba(8, 13, 28, 0.9);
+  }
+
+  &[open] {
+    display: flex;
+    flex-direction: column;
+    animation: lb-in 0.25s $ease;
+  }
+
+  &__bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+  }
+
+  &__title {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 600;
+    color: $white;
+  }
+
+  &__counter {
+    font-size: 15px;
+    opacity: 0.8;
+  }
+
+  &__btn {
+    @include flex-center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba($white, 0.14);
+    color: $white;
+    transition: background-color $t-fast;
+
+    &:hover {
+      background: rgba($white, 0.28);
+    }
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__stage {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  // el contenido se ajusta a la pantalla (sin scroll horizontal ni arrastre)
+  &__body {
+    flex: 1;
+    min-width: 0;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    user-select: none;
+  }
+
+  &__img {
+    max-width: 100%;
+    max-height: calc(100dvh - 150px);
+    width: auto;
+    height: auto;
+    padding: 18px;
+    border-radius: 18px;
+    background: $diagram-bg;
+    -webkit-user-drag: none;
+  }
+
+  // diagramas HTML (Cascada / V): ancho máximo que entra sin cortarse
+  &__diagram {
+    width: min(100%, calc((100dvh - 150px) * 1.7778));
+    margin: 0 !important;
+    cursor: default;
+    box-shadow: none !important;
+
+    img {
+      -webkit-user-drag: none;
+    }
+  }
+
+  &__caption {
+    padding: 10px 18px 16px;
+    text-align: center;
+    font-size: 15px;
+    opacity: 0.85;
+  }
+
+  @include down(md) {
+    &__stage {
+      padding: 0 4px;
+      gap: 4px;
+    }
+
+    &__btn {
+      width: 38px;
+      height: 38px;
+    }
+
+    &__title {
+      font-size: 15px;
+    }
+  }
+}
+
+@keyframes lb-in {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}

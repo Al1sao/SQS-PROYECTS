@@ -1,0 +1,23 @@
+// ==========================================================
+// Contenedor central
+// ==========================================================
+@use '../abstracts' as *;
+
+.container {
+  width: 100%;
+  max-width: $container;
+  margin-inline: auto;
+  padding-inline: $gutter;
+
+  @include down(sm) {
+    padding-inline: 16px;
+  }
+
+  &--narrow {
+    max-width: 1060px;
+  }
+}
+
+.page-section {
+  padding-block: 18px;
+}

@@ -1,0 +1,36 @@
+---
+{
+  "title": "Comparador interactivo",
+  "page": "comparador",
+  "bodyClass": "page-comparador",
+  "heroTitle": "Comparador interactivo",
+  "heroSubtitle": "Compara modelos de desarrollo en tiempo real."
+}
+---
+{{> hero}}
+
+<section class="section-card comparator reveal" data-comparator aria-labelledby="t-comp">
+  <header class="section-card__header">
+    <img draggable="false" class="section-card__icon" src="assets/img/ic-bulb-sm.webp" alt="Ícono de lamparita que representa la comparación de modelos" width="40" height="44">
+    <h2 id="t-comp" class="section-card__title">Elige dos modelos para comparar</h2>
+  </header>
+
+  <div class="comparator__controls">
+    <div class="field">
+      <label class="field__label" for="model-a">Modelo A: <strong data-name="a"></strong></label>
+      <div class="field__control">
+        <select class="field__input" id="model-a"></select>
+      </div>
+    </div>
+    <span class="comparator__vs" aria-hidden="true">VS</span>
+    <div class="field">
+      <label class="field__label" for="model-b">Modelo B: <strong data-name="b"></strong></label>
+      <div class="field__control">
+        <select class="field__input" id="model-b"></select>
+      </div>
+    </div>
+  </div>
+
+  <div class="comparator__table" aria-live="polite"></div>
+  <div class="comparator__winner"></div>
+</section>

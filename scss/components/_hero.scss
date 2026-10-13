@@ -1,0 +1,92 @@
+// ==========================================================
+// Hero (banner gris con título, subtítulo y logo)
+// ==========================================================
+@use '../abstracts' as *;
+
+.hero {
+  position: relative;
+  margin: 46px 0 40px;
+  min-height: 222px;
+  padding: 30px 40px 26px 14px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 24px;
+  background: $gray-150;
+  border-radius: 22px;
+  // capa gris desplazada detrás del banner (sombra sólida) + halo suave
+  box-shadow:
+    10px 10px 0 #dcdcdc,
+    10px 10px 30px 10px rgba(230, 230, 230, 0.8),
+    0 6px 12px rgba(15, 23, 42, 0.12);
+
+  &__title {
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    line-height: 1.05;
+    max-width: 760px;
+    margin-left: 2px;
+  }
+
+  &__subtitle {
+    margin-top: 44px;
+    max-width: 760px;
+    font-size: 28px;
+    line-height: 1.04;
+    color: $gray-600;
+    padding-left: 4px;
+  }
+
+  &__logo {
+    width: 180px;
+    height: auto;
+    align-self: start;
+    margin-top: -6px;
+    animation: hero-float 6s ease-in-out infinite;
+  }
+
+  @include down(lg) {
+    &__title {
+      font-size: 34px;
+    }
+    &__subtitle {
+      font-size: 22px;
+      margin-top: 28px;
+    }
+    &__logo {
+      width: 140px;
+    }
+  }
+
+  @include down(md) {
+    grid-template-columns: 1fr;
+    padding: 24px 20px;
+    margin-top: 28px;
+
+    &__logo {
+      grid-row: 1;
+      width: 110px;
+      justify-self: end;
+      margin: 0 0 -10px;
+    }
+    &__title {
+      font-size: 26px;
+    }
+    &__subtitle {
+      font-size: 18px;
+      margin-top: 16px;
+    }
+  }
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}

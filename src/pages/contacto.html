@@ -1,0 +1,77 @@
+---
+{
+  "title": "Contacto y soporte",
+  "page": "contacto",
+  "bodyClass": "page-contacto",
+  "heroTitle": "Contacto y soporte",
+  "heroSubtitle": "¿Tienes dudas sobre metodologías ágiles o métricas SQA? Escríbenos."
+}
+---
+{{> hero}}
+
+<section class="form-card reveal" aria-labelledby="t-form">
+  <header class="form-card__header">
+    <img draggable="false" class="form-card__icon" src="assets/img/ic-handshake.webp" alt="Ícono de apretón de manos con engranaje que representa la atención de consultas" width="50" height="54">
+    <h2 id="t-form" class="form-card__title">ENVÍANOS TU CONSULTA</h2>
+  </header>
+
+  <form id="contact-form" novalidate>
+    <div class="field">
+      <label class="field__label" for="nombre">Nombre completo: <span class="field__req" aria-hidden="true">*</span></label>
+      <div class="field__control">
+        <input class="field__input" id="nombre" name="nombre" type="text" maxlength="60" placeholder="Ej: Pedro Martínez" autocomplete="name" required aria-describedby="err-nombre">
+      </div>
+      <span class="field__error" id="err-nombre" aria-live="polite"></span>
+    </div>
+
+    <div class="field">
+      <label class="field__label" for="email">Correo electrónico: <span class="field__req" aria-hidden="true">*</span></label>
+      <div class="field__control">
+        <input class="field__input" id="email" name="email" type="email" maxlength="100" placeholder="Ej: pedro@gmail.com" autocomplete="email" required aria-describedby="err-email">
+      </div>
+      <span class="field__error" id="err-email" aria-live="polite"></span>
+    </div>
+
+    <div class="field">
+      <label class="field__label" for="tipo">Tipo de consulta: <span class="field__req" aria-hidden="true">*</span></label>
+      <div class="field__control">
+        <select class="field__input" id="tipo" name="tipo" required aria-describedby="err-tipo">
+          <option value="" selected disabled>Selecciona...</option>
+          <option value="metodologias">Metodologías ágiles</option>
+          <option value="metricas">Métricas SQA</option>
+          <option value="normas">Normas ISO</option>
+          <option value="procesos">Procesos de desarrollo</option>
+          <option value="feedback">Feedback / sugerencia</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+      <span class="field__error" id="err-tipo" aria-live="polite"></span>
+    </div>
+
+    <div class="field">
+      <label class="field__label" for="mensaje">Mensaje:</label>
+      <div class="field__control">
+        <textarea class="field__input" id="mensaje" name="mensaje" maxlength="500" placeholder="Escribe tu mensaje..." aria-describedby="err-mensaje cnt-mensaje"></textarea>
+      </div>
+      <span class="field__counter" id="cnt-mensaje" aria-live="polite">0 / 500</span>
+      <span class="field__error" id="err-mensaje" aria-live="polite"></span>
+    </div>
+
+    <div class="form-actions">
+      <button class="btn btn--lg" type="submit">Enviar</button>
+    </div>
+    <p class="form-status" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+<section class="info-card reveal" aria-labelledby="t-info">
+  <h2 id="t-info" class="info-card__title">INFORMACIÓN DIRECTA</h2>
+  <ul class="info-card__list">
+    <li><img draggable="false" src="assets/img/ic-mail.webp" alt="Ícono de sobre de correo electrónico" width="32" height="24">Email: <a href="mailto:ContactoSQS@gmail.com">ContactoSQS@gmail.com</a></li>
+    <li><img draggable="false" src="assets/img/ic-clock.webp" alt="Ícono de reloj que indica el horario de atención" width="32" height="30">Atención: lunes a viernes de 9:00 a 18:00 hs</li>
+  </ul>
+  <p class="info-card__note">
+    <img draggable="false" src="assets/img/ic-shield-sm.webp" alt="Ícono de escudo que representa el compromiso con la calidad" width="26" height="30">
+    S.Q.S - Scrum Quality Service: compromiso con la calidad de software.
+  </p>
+</section>

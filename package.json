@@ -1,0 +1,25 @@
+{
+  "name": "sqs-scrum-quality-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "S.Q.S - Portal educativo sobre Gestión de Calidad de Software",
+  "scripts": {
+    "build:html": "node scripts/build-html.js",
+    "build:css": "sass scss/main.scss dist/css/main.css --no-source-map",
+    "build:js": "esbuild js/main.js --bundle --format=iife --target=es2018 --outfile=dist/js/bundle.js",
+    "build": "npm run build:html && npm run build:css && npm run build:js && npm test",
+    "watch:css": "sass --watch scss/main.scss dist/css/main.css",
+    "watch:js": "esbuild js/main.js --bundle --format=iife --target=es2018 --outfile=dist/js/bundle.js --watch",
+    "serve": "python3 -m http.server 5500",
+    "qa": "node scripts/qa-check.js",
+    "validate": "html-validate *.html",
+    "test": "npm run validate && npm run qa",
+    "test:e2e": "node scripts/e2e.js",
+    "test:all": "npm test && npm run test:e2e"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.2",
+    "html-validate": "^8.29.0",
+    "sass": "^1.77.8"
+  }
+}
